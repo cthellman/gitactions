@@ -59,7 +59,8 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: "{{defaultContext}}:src/react"
+          #context: "{{defaultContext}}:src/react"
+          context: .
           push: true
           tags: user/app:latest
     
