@@ -4,12 +4,12 @@ EXPOSE 80
 EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
-WORKDIR /
+#WORKDIR /
 
 RUN curl -sL https://deb.nodesource.com/setup_16.x |  bash -
 RUN apt-get install -y nodejs
 
-WORKDIR /src/react
+#WORKDIR /
 
 RUN dotnet restore "react.csproj"
 
