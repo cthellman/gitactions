@@ -8,10 +8,7 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 RUN curl -sL https://deb.nodesource.com/setup_16.x |  bash -
 RUN apt-get install -y nodejs
 
-WORKDIR /src/react
-COPY src/react/. .
-
-WORKDIR /src/react
+COPY ./*.csproj .
 
 RUN dotnet restore "react.csproj"
 
