@@ -23,3 +23,15 @@ jobs:
       run: dotnet build src/react --no-restore 
     - name: Test
       run: dotnet test src/react --no-build --verbosity normal
+
+
+  create-tag:
+    
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      - uses: rickstaa/action-create-tag@v1
+        with:
+          tag: "latest"
+          message: "Latest release"
