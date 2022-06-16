@@ -9,6 +9,8 @@ WORKDIR /
 RUN curl -sL https://deb.nodesource.com/setup_16.x |  bash -
 RUN apt-get install -y nodejs
 
+WORKDIR /src/react
+
 RUN dotnet restore "react.csproj"
 
 RUN dotnet build "react.csproj" -c Release -o /app/build
