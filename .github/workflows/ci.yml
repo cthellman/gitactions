@@ -61,5 +61,5 @@ jobs:
         with:
           context: "{{defaultContext}}:src/react"
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker:${{ new_tag }}
     
